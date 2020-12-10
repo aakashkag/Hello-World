@@ -1,15 +1,30 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1(Init)') {
+        stage('Initialize') {
             steps {
-                echo 'Hello world! Stage1 Step1' 
-                echo 'Hello world! Stage1 Step2' 
+                echo 'Initialize Stage ' 
+               
             }
         }
-        stage('Stage 2(Testing)') {
+        stage('Build') {
             steps {
-                echo 'Hello world! Stage2 Step1' 
+                echo 'Build Stage' 
+            }
+        }
+        stage('QA') {
+            steps {
+                echo 'QA Stage' 
+            }
+        }
+         stage('Deploy') {
+            steps {
+                echo 'Deploy Stage' 
+            }
+        }
+         stage('Monitor') {
+            steps {
+                echo 'Monitor Stage' 
             }
         }
     }
