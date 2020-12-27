@@ -14,11 +14,7 @@ pipeline {
                 sh './testing.sh'
             }
         }
-        stage('QA') {
-            steps {
-                echo 'QA Stage' 
-            }
-        }
+       
          stage('Deploy') {
             steps {
                 echo 'Deploy Stage' 
